@@ -1,0 +1,22 @@
+{
+  "name": "myfile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "коментарий": "скрипт который переводит scss в css",
+    "scss-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:css/",
+    "коментарий1": "скрипт который автоматически запускает scss-compile ",
+    "watch-scss": "nodemon --watch scss/ --ext scss --exec \"npm-run-all scss-compile\""
+  },
+  "author": "Ustim",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap-sass": "^3.4.3",
+    "nodemon": "^2.0.16",
+    "sass": "^1.52.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
