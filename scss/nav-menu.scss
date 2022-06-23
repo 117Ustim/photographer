@@ -1,35 +1,49 @@
-@import"style.scss";
-
+@import "style.scss";
 
 .col-1 {
-    float: left;
-    width: 42%;
-    padding-top: 75px;
-    .header-menu-left  {
-        float: right;
-       a {
-        padding: 0 40px;
+  float: left;
+  width: 42%;
+  padding-top: 75px;
+  .header-menu-left {
+    float: right;
 
-        
-       }
+    a {
+      padding: 0 40px;
+      position: relative;
     }
-    .header-menu-right {
-        float: left;
-        a {
-            padding: 0 40px;
-           }
-    }
- }  
- 
- .col-2 {
+  }
+  .header-menu-right {
     float: left;
-    width: 16%; 
-    
-    .header-logo {
-        padding-top: 30px;
-        img {
-            width: 130px;
-            height: 150px;
-        }
+    a {
+      padding: 0 40px;
+      position: relative;
     }
- }
+  }
+}
+
+.col-2 {
+  float: left;
+  width: 16%;
+
+  .header-logo {
+    padding-top: 30px;
+    img {
+      width: 130px;
+      height: 150px;
+    }
+  }
+}
+
+.nav-menu a::before {
+  content: "";
+  bottom: -5px;
+  left: 30px;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color:rgb(132, 131, 131);
+  transition: 0.2s;
+}
+.nav-menu a:hover:before {
+  width: 60%;
+}

@@ -38,12 +38,14 @@ body, html {
 }
 .col-1 .header-menu-left a {
   padding: 0 40px;
+  position: relative;
 }
 .col-1 .header-menu-right {
   float: left;
 }
 .col-1 .header-menu-right a {
   padding: 0 40px;
+  position: relative;
 }
 
 .col-2 {
@@ -56,6 +58,21 @@ body, html {
 .col-2 .header-logo img {
   width: 130px;
   height: 150px;
+}
+
+.nav-menu a::before {
+  content: "";
+  bottom: -5px;
+  left: 30px;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(132, 131, 131);
+  transition: 0.2s;
+}
+
+.nav-menu a:hover:before {
+  width: 60%;
 }
 
 /*# sourceMappingURL=nav-menu.css.map */
