@@ -27,21 +27,5 @@ body, html {
 .container {
   min-height: 100px;
 }
-.container .col-1 {
-  float: left;
-  width: 42%;
-  padding-top: 75px;
-}
-.container .col-2 {
-  float: left;
-  width: 16%;
-}
-.container .col-2 .header-logo {
-  padding-top: 30px;
-}
-.container .col-2 .header-logo img {
-  width: 130px;
-  height: 130px;
-}
 
 /*# sourceMappingURL=style.css.map */

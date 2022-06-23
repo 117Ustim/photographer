@@ -1,0 +1,35 @@
+@import"style.scss";
+
+
+.col-1 {
+    float: left;
+    width: 42%;
+    padding-top: 75px;
+    .header-menu-left  {
+        float: right;
+       a {
+        padding: 0 40px;
+
+        
+       }
+    }
+    .header-menu-right {
+        float: left;
+        a {
+            padding: 0 40px;
+           }
+    }
+ }  
+ 
+ .col-2 {
+    float: left;
+    width: 16%; 
+    
+    .header-logo {
+        padding-top: 30px;
+        img {
+            width: 130px;
+            height: 150px;
+        }
+    }
+ }
