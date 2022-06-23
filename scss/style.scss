@@ -1,0 +1,53 @@
+$bgColor:#ffffff;
+$textColor:rgb(71, 69, 69);
+* {
+    padding: 0;
+    margin: 0;    
+}
+
+body , html {
+    font-family: HelveticaNeueUltraLight,Helvetica,Roboto,Arial,sans-serif;
+    background-color:$bgColor ;
+    color: $textColor;
+    box-sizing: border-box;
+}
+
+.center {
+    text-align: center;
+}
+
+.links  {
+    text-transform: uppercase;
+
+    a {
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing:5px;
+    color: $textColor;
+}
+}
+
+.container {
+    min-height: 100px;
+    
+ .col-1 {
+    float: left;
+    width: 42%;
+    padding-top: 75px;
+   
+
+ }  
+ 
+ .col-2 {
+    float: left;
+    width: 16%; 
+    
+    .header-logo {
+        padding-top: 30px;
+        img {
+            width: 130px;
+            height: 130px;
+        }
+    }
+ }
+}
