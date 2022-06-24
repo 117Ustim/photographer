@@ -1,27 +1,18 @@
 @import "style.scss";
 
-.col-1 {
+.cole-1 {
   float: left;
   width: 42%;
   padding-top: 75px;
   .header-menu-left {
     float: right;
-
-    a {
-      padding: 0 40px;
-      position: relative;
-    }
   }
   .header-menu-right {
     float: left;
-    a {
-      padding: 0 40px;
-      position: relative;
-    }
   }
 }
 
-.col-2 {
+.cole-2 {
   float: left;
   width: 16%;
 
@@ -34,16 +25,46 @@
   }
 }
 
-.nav-menu a::before {
+.dws-menu ul,
+.dws-menu ol {
+  list-style: none;
+
+  a {
+    padding: 0 40px;
+    position: relative;
+  }
+}
+
+.dws-menu > ul {
+  display: flex;
+  justify-content: center;
+}
+
+/*sub menu*/
+.dws-menu li ul {
+  position: absolute;
+  min-width: 150px;
+  display: none;
+  padding-top: 20px;
+}
+
+.dws-menu li > ul li ul {
+  position: absolute;
+}
+.dws-menu li:hover > ul {
+  display: block;
+}
+
+.dws-menu a::before {
   content: "";
   bottom: -5px;
   left: 30px;
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color:rgb(132, 131, 131);
+  background-color: rgb(132, 131, 131);
   transition: 0.2s;
 }
-.nav-menu a:hover:before {
+.dws-menu a:hover:before {
   width: 60%;
 }
