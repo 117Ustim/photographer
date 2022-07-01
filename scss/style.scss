@@ -1,13 +1,13 @@
 $bgColor:#ffffff;
 $textColor:rgb(71, 69, 69);
-
+$fontmenu:HelveticaNeueUltraLight,Helvetica,Roboto,Arial,sans-serif;
 * {
     padding: 0;
     margin: 0;    
 }
 
 body , html {
-    font-family:HelveticaNeueUltraLight,Helvetica,Roboto,Arial,sans-serif;
+    font-family:$fontmenu;
     background-color:$bgColor ;
     color: $textColor;
     box-sizing: border-box;

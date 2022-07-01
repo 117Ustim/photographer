@@ -64,10 +64,10 @@
                   <li><a href="#">Быт. химия</a></li>
                 </ul>
               </li>
-              <li><a href="#"><i class="fa fa-cogs"></i>Услуги</a>
+              <li><a href="#"><i class="fa fa-cogs"></i>Контакты</a>
                 <ul>
-                  <li><a href="#">Услуга 1</a></li>
-                  <li><a href="#">Услуга 2</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#" class="open_pop_up">Админ</a></li>
                   <li><a href="#">Услуга 3</a></li>
                 </ul>
               </li>
@@ -76,7 +76,22 @@
       </div>
         </div>
       </div>
-  
+ 
+      <!-- admin-  -->
+      
+        <div class="pop_up" id="pop_up">
+          <div class="pop_up_container">
+            <div class="pop_up_body" id="pop_up_body">
+              <p>Введите пароль</p>
+              <form action="">
+                <input type="text" id="login" placeholder="Имя">
+                <input type="text" id="password" placeholder="Пароль">
+                <button id="check">Вход</button>
+              </form>
+              <div class="pop_up_close" id="pop_up_close">&#10006</div>     
+            </div>
+          </div>
+        </div>
         <!-- Swiper -->
         
         
@@ -105,7 +120,8 @@
     
         <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
-<script src="js/index.js"></script>       
+<script src="js/carusel.js"></script>
+<script src="js/admin.js"></script>       
         
             
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

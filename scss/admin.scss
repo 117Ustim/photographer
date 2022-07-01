@@ -1,0 +1,114 @@
+$fontmenu:HelveticaNeueUltraLight,Helvetica,Roboto,Arial,sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.button {
+    margin-top: 40px;
+    text-align: center;
+    a {
+        font-family: $fontmenu;
+        background-color:aqua;
+        padding: 15px 40px;
+        border-radius: 10px;
+        text-decoration: none;
+        color:#fff ;
+        font-weight: 500;
+
+    }
+} 
+// фон 
+.pop_up { 
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ left: 0;
+ top: 0;
+ background-color:transparent;
+ z-index: 2;
+//  мягкое всплытие окна
+transform: translateY(-44.5%) scale(0);
+transition: .4s ease-in-out;
+}
+.pop_up.active{
+    //  мягкое всплытие окна
+    transform: translateY(0) scale(100%); 
+    background-color:rgba(0, 0, 0,.8);
+}
+.pop_up_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+// окно
+.pop_up_body {
+    margin: auto;
+    width: 350px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px 15px 110px 15px;
+    position: relative;
+    font-size: 14px;
+    font-family: $fontmenu;
+    font-weight: 600;
+    color: #22262d;
+    margin-top: 150px;
+input {
+    display: block;
+    margin: 25px auto 0px auto;
+    width: 200px;
+    padding: 10px 15px;
+    background-color: #e5e5e5;
+    border-radius:10px;
+    border:none;
+    font-family: $fontmenu;
+    font-weight: 500;
+    font-size: 12px;
+    color: #696c6e;   
+}
+
+button {
+    cursor: pointer;
+    display: block;
+    width: 150px;
+    margin: 30px auto 0 auto;
+    padding: 5px 0;
+    border:none;
+    border-radius:10px;
+    color: #fff;
+    background: rgb(219, 109, 109);
+}
+
+}
+.pop_up_body button:focus {
+    outline-color: #d3d4d4;
+   
+}  
+.pop_up_body input:focus {
+        outline-color: #d3d4d4;
+       
+    }
+
+ .pop_up_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 14px;
+    cursor: pointer;
+ }   
+
+
+//  admin-panel
+
+.header-menu{
+    width: 100%;
+    margin: 20px 0;
+    
+    
+}
