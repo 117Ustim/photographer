@@ -1,0 +1,30 @@
+
+body , html {
+    
+    background-color:$bgColor !important ;
+    color: $textColor;
+    box-sizing: border-box;
+}
+//  admin-panel
+
+.header-menu{
+   
+    width: 100%;
+    height: 80px;
+    background-color: rgb(219, 214, 214);
+    padding: 20px 0;
+    .menu-left {
+        float: left;
+        margin-left: 300px;
+    }
+    .menu-right {
+        float: left;
+        margin-left: 100px;
+    }
+    .button-exit {
+        float: right;
+        margin-right: 10px;
+    }
+    
+    
+}
