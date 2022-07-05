@@ -1,6 +1,5 @@
-$bgColor:#ffffff;
-$textColor:rgb(71, 69, 69);
-$fontmenu:HelveticaNeueUltraLight,Helvetica,Roboto,Arial,sans-serif;
+@import './variables.scss';
+
 * {
     padding: 0;
     margin: 0;    
