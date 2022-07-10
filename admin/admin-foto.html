@@ -1,19 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="../css/index.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        
-  <title>admin-foto</title>
+    <title>admin-foto</title>
+  </head>
 
-</head>
-<body>
+  <body>
+    <div class="header-menu">
+      <div class="menu-left">
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle"
+            type="button"
+            id="MenuButtonAdmin"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Выбор страницы
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Главная</a></li>
+            <li><a class="dropdown-item" href="#">Детское фото</a></li>
+            <li><a class="dropdown-item" href="#">Свадьба</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-centers">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary f-1">Фотографии</button>
+          <button href="#" type="button" class="btn btn-primary tel-1">
+            Данные
+          </button>
+          <button href="#" type="button" class="btn btn-primary">Email</button>
+        </div>
+      </div>
 
-</body>
+      <div class="menu-right">
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label">Добавить фото</label>
+          <input
+            class="form-control form-control-sm"
+            id="formFileSm"
+            type="file"
+            />
+        </div>
 
+        <button type="button" class="b-2">Добавить</button>
+      </div>
+
+      <button type="button" class="b-1">Выйти</button>
+    </div>
+
+    <div class="container">
+      <div class="block-1">
+        <div class="admin-foto"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="admin-menu.js"></script>
+  </body>
 </html>
