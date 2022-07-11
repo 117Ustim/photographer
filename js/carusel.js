@@ -24,7 +24,4 @@ const buildCarousel = () => {
   }
 }
 
-
 export default buildCarousel;
-
-

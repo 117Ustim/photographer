@@ -1,4 +1,12 @@
-@import "./variables.scss";
+@import './variables.scss';
+
+body,
+html {
+
+  background-color: $bgColor  !important;
+  color: $textColor;
+  box-sizing: border-box;
+}
 
 //  admin-panel
 
