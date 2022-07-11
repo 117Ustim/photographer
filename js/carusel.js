@@ -1,7 +1,8 @@
 import 'swiper/css';
-const Swiper = require('swiper').default;
+import { Swiper } from '../node_modules/swiper/swiper-bundle.esm.browser';
+import getImages from './images';
 
-let swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".swiper", {
   slidesPerView: 3,
   spaceBetween: 30,
   pagination: {
@@ -10,7 +11,20 @@ let swiper = new Swiper(".mySwiper", {
   },
 });
 
+const buildCarousel = () => {
+  const images = getImages();
 
-module.exoprts = swiper;
+  for (let i = 0; i < images.length; i++) {
+    let div = document.createElement("div");
+    div.className = "swiper-slide";
+    let img = document.createElement("img");
+    img.src = images[i];
+    div.appendChild(img);
+    swiper.appendSlide(div);
+  }
+}
+
+
+export default buildCarousel;
 
 

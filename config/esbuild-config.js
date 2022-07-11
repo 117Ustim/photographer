@@ -13,7 +13,8 @@ const config = {
     loader: {
         '.png': 'file',
         '.jpeg': 'file',
-        '.svg': 'file'
+        '.svg': 'file',
+        '.otf': 'file'
     },
     entryPoints: [resolvePath('js', 'index.js')],
     metafile: true,

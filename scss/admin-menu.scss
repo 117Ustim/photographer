@@ -13,6 +13,7 @@
     float: left;
     margin-left: 200px;
   }
+
   .menu-centers {
     width: 20%;
     float: left;
@@ -22,6 +23,7 @@
   .menu-right {
     float: left;
     margin-top: 5px;
+
     label {
       font-size: 12px;
       float: right;
@@ -38,9 +40,11 @@
     .form-control {
       width: 230px;
     }
+
     .mb-3 {
       float: left;
       width: 400px;
+
       .form-label {
         padding-left: 10px;
       }
@@ -53,17 +57,19 @@
     border-radius: 3px;
     padding: 3px;
   }
+
   .b-1 {
     background-color: rgb(236, 17, 17);
     border: 1px solid #fff;
     border-radius: 3px;
     float: right;
-    
+
     margin: 7px 20px;
     padding: 4px;
     color: #fff;
   }
 }
+
 #formFileSm {
   margin: 0 160px;
 }

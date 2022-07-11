@@ -5,7 +5,7 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, '..', 'build')));
+app.use(express.static(path.resolve(__dirname, '..', 'build/')));
 app.listen('3000', () => { console.log('dev server started on http://localhost:3000') });
 
 ESBuild.build({

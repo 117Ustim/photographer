@@ -23,4 +23,4 @@ const adminPanelPopup = () => {
   };
 };
 
-module.exports = adminPanelPopup;
+export default adminPanelPopup;
