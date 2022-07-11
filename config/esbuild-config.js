@@ -9,14 +9,14 @@ function resolvePath(...segments) {
 
 const config = {
     outdir: resolvePath('build'),
-    entryNames: '[dir]/bundle.[name]-[hash]',
+    // entryNames: '[dir]/bundle.[name]-[hash]',
     loader: {
         '.png': 'file',
         '.jpeg': 'file',
         '.svg': 'file',
         '.otf': 'file'
     },
-    entryPoints: [resolvePath('js', 'index.js')],
+    entryPoints: [resolvePath('js', 'index.js'), resolvePath('admin', 'admin-menu.js')],
     metafile: true,
     plugins: [CleanPlugin, CopyStaticPlugingin({}), sassPlugin()],
     watch: {

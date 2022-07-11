@@ -16,23 +16,9 @@ const adminPanelPopup = () => {
     let login = document.getElementById("login").value;
     let password = document.getElementById("password").value;
     if (login == "admin" && password == "777") {
-      window.location.href = "./admin/admin-foto.html";
+      window.location.href = "admin-foto.html";
     } else {
       alert("Вы ввели неправельный логин или пароль");
-    }
-  };
-
-  closePopUp.addEventListener('click', () => {
-    popUp.classList.remove('active');
-  });
-
-  document.getElementById('check').onclick = function () {
-    let login = document.getElementById('login').value;
-    let password = document.getElementById('password').value;
-    if (login == 'admin' && password == '777') {
-      window.location.href = "admin.html";
-    } else {
-      alert('Вы ввели неправельный логин или пароль');
     }
   };
 };
