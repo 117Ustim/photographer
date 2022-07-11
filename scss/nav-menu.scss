@@ -2,9 +2,11 @@
   float: left;
   width: 42%;
   padding-top: 75px;
+
   .header-menu-left {
     float: right;
   }
+
   .header-menu-right {
     float: left;
   }
@@ -14,8 +16,10 @@
   float: left;
   width: 16%;
 
+
   .header-logo {
     padding-top: 30px;
+
     img {
       width: 130px;
       height: 150px;
@@ -33,7 +37,7 @@
   }
 }
 
-.dws-menu > ul {
+.dws-menu>ul {
   display: flex;
   justify-content: center;
 }
@@ -46,21 +50,22 @@
   padding-top: 20px;
 }
 
-.dws-menu li > ul li ul {
+.dws-menu li>ul li ul {
   position: absolute;
-  
-  
-  
+
+
+
 }
-.dws-menu li:hover > ul {
+
+.dws-menu li:hover>ul {
   display: block;
-  
+
 }
 
 .dws-menu a::before {
   content: "";
   bottom: -5px;
-  
+
   left: 30px;
   position: absolute;
   width: 0%;
@@ -68,10 +73,12 @@
   background-color: rgb(132, 131, 131);
   transition: 0.2s;
 }
+
 .dws-menu a:hover:before {
   width: 60%;
 }
-  li {
+
+li {
   margin-top: 10px;
-  
- }
+
+}

@@ -1,4 +1,8 @@
-let swiper = new Swiper(".mySwiper", {
+import 'swiper/css';
+import { Swiper } from '../node_modules/swiper/swiper-bundle.esm.browser';
+import getImages from './images';
+
+let swiper = new Swiper(".swiper", {
   slidesPerView: 3,
   spaceBetween: 30,
   pagination: {
@@ -7,22 +11,17 @@ let swiper = new Swiper(".mySwiper", {
   },
 });
 
-let images = [
-  'img/foto/08.jpg',
-  'img/foto/357.jpg',
-  'img/foto/603.jpg',
-  'img/foto/f1.jpg',
-  'img/foto/f2.jpg',
-  'img/foto/f3.jpg',
-  'img/foto/f4.jpg',
-  'img/foto/sa.jpg'
-];
+const buildCarousel = () => {
+  const images = getImages();
 
-for (let i = 0; i < images.length; i++) {
-  let div = document.createElement("div");
-  div.className = 'swiper-slide';
-  let img = document.createElement("img");
-  img.src = images[i];
-  div.appendChild(img);
-  swiper.appendSlide(div);
+  for (let i = 0; i < images.length; i++) {
+    let div = document.createElement("div");
+    div.className = "swiper-slide";
+    let img = document.createElement("img");
+    img.src = images[i];
+    div.appendChild(img);
+    swiper.appendSlide(div);
+  }
 }
+
+export default buildCarousel;

@@ -1,0 +1,8 @@
+const ESBuild = require('esbuild');
+const config = require('./esbuild-config');
+const path = require('path');
+
+ESBuild.build({
+    ...config,
+    minify: true
+}).then(result => { });
