@@ -1,84 +1,104 @@
-.cole-1 {
-  float: left;
-  width: 42%;
-  padding-top: 75px;
+.menu {
+  ul {
+    z-index: 1000;
 
-  .header-menu-left {
-    float: right;
-  }
+    .sub-menu {
+      padding: 10px 5px 10px 5px;
+      background-color: rgb(213 242 243 / 70%);
+      border-radius: 3%;
 
-  .header-menu-right {
-    float: left;
-  }
-}
+      li {
+        margin: 0;
+      }
 
-.cole-2 {
-  float: left;
-  width: 16%;
-
-
-  .header-logo {
-    padding-top: 30px;
-
-    img {
-      width: 130px;
-      height: 150px;
+      a {
+        font-size: 12px;
+      }
     }
   }
-}
 
-.dws-menu ul,
-.dws-menu ol {
-  list-style: none;
+  .cole-1 {
+    float: left;
+    width: 42%;
+    padding-top: 75px;
 
-  a {
-    padding: 0 40px;
-    position: relative;
+    .header-menu-left {
+      float: right;
+    }
+
+    .header-menu-right {
+      float: left;
+    }
   }
-}
 
-.dws-menu>ul {
-  display: flex;
-  justify-content: center;
-}
-
-/*sub menu*/
-.dws-menu li ul {
-  position: absolute;
-  min-width: 150px;
-  display: none;
-  padding-top: 20px;
-}
-
-.dws-menu li>ul li ul {
-  position: absolute;
+  .cole-2 {
+    float: left;
+    width: 16%;
 
 
+    .header-logo {
+      padding-top: 30px;
 
-}
+      img {
+        width: 130px;
+        height: 150px;
+      }
+    }
+  }
 
-.dws-menu li:hover>ul {
-  display: block;
+  .dws-menu ul,
+  .dws-menu ol {
+    list-style: none;
 
-}
+    a {
+      padding: 0 40px;
+      position: relative;
+    }
+  }
 
-.dws-menu a::before {
-  content: "";
-  bottom: -5px;
+  .dws-menu>ul {
+    display: flex;
+    justify-content: center;
+  }
 
-  left: 30px;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: rgb(132, 131, 131);
-  transition: 0.2s;
-}
+  /*sub menu*/
+  .dws-menu li ul {
+    position: absolute;
+    min-width: 150px;
+    display: none;
+    padding-top: 20px;
+  }
 
-.dws-menu a:hover:before {
-  width: 60%;
-}
+  .dws-menu li>ul li ul {
+    position: absolute;
 
-li {
-  margin-top: 10px;
 
+
+  }
+
+  .dws-menu li:hover>ul {
+    display: block;
+
+  }
+
+  .dws-menu a::before {
+    content: "";
+    bottom: -5px;
+
+    left: 30px;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(132, 131, 131);
+    transition: 0.2s;
+  }
+
+  .dws-menu a:hover:before {
+    width: 60%;
+  }
+
+  li {
+    margin-top: 10px;
+
+  }
 }
