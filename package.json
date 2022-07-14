@@ -8,7 +8,7 @@
     "scss-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:css/",
     "коментарий1": "скрипт который автоматически запускает scss-compile ",
     "watch-scss": "nodemon --watch scss/ --ext scss --exec \"npm-run-all scss-compile\"",
-    "start": "node ./config/esbuild-dev.js",
+    "build:dev": "node ./config/esbuild-dev.js",
     "build:prod": "node ./config/esbuild-prod.js"
   },
   "author": "Ustim",
@@ -16,10 +16,12 @@
   "devDependencies": {
     "bootstrap": "^5.1.3",
     "bootstrap-sass": "^3.4.3",
+    "cors": "^2.8.5",
     "esbuild": "^0.14.48",
     "esbuild-plugin-sass": "^1.0.1",
     "express": "^4.18.1",
     "jquery": "^3.6.0",
+    "multer": "^1.4.5-lts.1",
     "nodemon": "^2.0.16",
     "sass": "^1.52.2",
     "swiper": "^8.3.0"

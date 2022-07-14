@@ -1,14 +1,18 @@
-const getImages = () => {
-  return [
-    "08.jpg",
-    "357.jpg",
-    "603.jpg",
-    "f1.jpg",
-    "f2.jpg",
-    "f3.jpg",
-    "f4.jpg",
-    "sa.jpg",
-  ];
+import $ from 'jquery';
+
+const loadPhotos = async (callback) => {
+  $.ajax({
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    context: document.body,
+    url: '/photos',
+    cache: false,
+    success: function (data) {
+      callback(data);
+    }
+  });
 }
 
-export default getImages;
+export default loadPhotos;
