@@ -1,4 +1,4 @@
-import getImages from '../js/images';
+import loadPhotos from '../js/images';
 
 let addFile = document.querySelector('.form-control');
 let addButton = document.querySelector('.b-2');
@@ -17,17 +17,10 @@ document.querySelector(".tel-1").onclick = function () {
 
 const imagesOut = document.querySelector(".admin-foto");
 
-const images = getImages();
-
-for (let i = 0; i < images.length; i++) {
-  let img = document.createElement("img");
-  img.src = images[i];
-  imagesOut.append(img);
-}
-
-
-addButton.onclick = function () {
-  console.log(addFile.value);
-  images.push(addFile.value);
-  console.log(images);
-}
+const images = loadPhotos((data) => {
+  data.photos.forEach(photoUrl => {
+    let img = document.createElement("img");
+    img.src = `/photos/${photoUrl}`;
+    imagesOut.append(img);
+  })
+});

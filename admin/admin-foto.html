@@ -37,12 +37,11 @@
     </div>
 
     <div class="menu-right">
-      <div class="mb-3">
+      <form class="mb-3 add-photo" action="/save" enctype="multipart/form-data" method="post">
         <label for="formFileSm" class="form-label">Добавить фото</label>
-        <input class="form-control form-control-sm" id="formFileSm" type="file" />
-      </div>
-
-      <button type="button" class="b-2">Добавить</button>
+        <input class="form-control form-control-sm" name="new-photo" type="file" />
+        <input type="submit" class="b-2" value="Добавить" />
+      </form>
     </div>
 
     <button type="button" class="b-1">Выйти</button>
