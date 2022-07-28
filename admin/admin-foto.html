@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <link rel="stylesheet" href="js/index.css">
+  <link rel="stylesheet" href="index.css">
 
   <title>admin-foto</title>
 </head>
 
 <body>
   <div class="header-menu">
-    <div class="menu-left">
+    <div class="pageSelection">
       <div class="dropdown">
         <button class="btn dropdown-toggle" type="button" id="MenuButtonAdmin" data-bs-toggle="dropdown"
           aria-expanded="false">
           Выбор страницы
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Главная</a></li>
+        <ul id="ttt"  class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">photos</a></li>
           <li><a class="dropdown-item" href="#">Детское фото</a></li>
           <li><a class="dropdown-item" href="#">Свадьба</a></li>
         </ul>
@@ -36,24 +36,40 @@
       </div>
     </div>
 
-    <div class="menu-right">
+    <div class="menu-add">
       <form class="mb-3 add-photo" action="/save" enctype="multipart/form-data" method="post">
-        <label for="formFileSm" class="form-label">Добавить фото</label>
+        <!-- <label for="formFileSm" class="form-label"></label> -->
         <input class="form-control form-control-sm" name="new-photo" type="file" />
-        <input type="submit" class="b-2" value="Добавить" />
+        <input type="submit" class="button-add-delete" value="Добавить" />
       </form>
-    </div>
+      </div>
+      <div class="menu-delete">
+      <!-- <form class="mb-3 add-photo" action="/photo" enctype="multipart/form-data" method="post"> -->
+        <!-- <label for="formFileSm" class="form-label"></label> -->
+        <p>Нажать два раза на фото</p>
+        <input type="submit"  class="button-add-delete " value="Удалить" id="delFotos" />
+      <!-- </form> -->
+</div>
 
-    <button type="button" class="b-1">Выйти</button>
+    
+
+    <button type="button" class="button-exit">Выйти</button>
   </div>
 
-  <div class="container">
+  <div class="container-fluid">
+    
     <div class="block-1">
-      <div class="admin-foto"></div>
-    </div>
+      <div class="admin-foto"></div>   
+    </div>    
+   
+  <div class="line"></div>
+ 
+  <div class="block-2">
+<div class="delete-foto"></div>
   </div>
 
-  <script src="admin/admin-menu.js"></script>
+</div>
+  <script src="admin-menu.js"></script>
 </body>
 
 </html>

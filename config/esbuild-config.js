@@ -9,7 +9,7 @@ function resolvePath(...segments) {
 
 const config = {
     outdir: resolvePath('build'),
-    // entryNames: '[dir]/bundle.[name]-[hash]',
+    entryNames: '[name]',
     loader: {
         '.png': 'file',
         '.jpeg': 'file',
@@ -24,7 +24,7 @@ const config = {
             if (err) {
                 console.error(err);
             } else {
-                console.log('Build ...');
+                console.log('Build is finished');
             }
         }
     },

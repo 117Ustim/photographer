@@ -1,18 +1,22 @@
 import $ from 'jquery';
 
-const loadPhotos = async (callback) => {
+const loadPhotos = (callback,fotoUrl) => {
   $.ajax({
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
     },
     context: document.body,
-    url: '/photos',
+    url: fotoUrl,
     cache: false,
     success: function (data) {
+      
       callback(data);
     }
   });
-}
+};
+
+
 
 export default loadPhotos;
+
