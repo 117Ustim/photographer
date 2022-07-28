@@ -1,30 +1,27 @@
-@import './variables.scss';
-
-.block-footer {
+@import "./variables.scss";
+.line-header {
   width: 100%;
   height: 40px;
-  background-color: rgb(224, 244, 244);
-
-  .col-4 {
-    width: 100%;
-    float: left;
-    text-align: center;
-    color: rgb(212, 206, 206);
-    font-size: 13px;
-    padding-top: 10px;
-
-    .icon-f {}
-
-
-    img {
-      width: 150px;
-      height: 150px;
-      margin: 0 10px;
-
-
-
-
-    }
-  }
+  background-color: $bgLineFooter;
 
 }
+.line-footer {
+  width: 100%;
+  height: 40px;
+ margin-top: 20px; 
+  background-color: $bgLineFooter;
+
+  
+}
+.col-4 {
+    position: absolute;
+   
+    width: 100%;
+    color: rgb(212, 206, 206);
+
+    img {
+      margin-top: -30px;
+      width: 100px;
+      height: 100px;
+    }
+  }

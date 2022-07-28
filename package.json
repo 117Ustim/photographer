@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "коментарий": "скрипт который переводит scss в css",
-    "scss-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:css/",
+    "scss-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:build/",
     "коментарий1": "скрипт который автоматически запускает scss-compile ",
     "watch-scss": "nodemon --watch scss/ --ext scss --exec \"npm-run-all scss-compile\"",
     "build:dev": "node ./config/esbuild-dev.js",
-    "build:prod": "node ./config/esbuild-prod.js"
+    "build:prod": "node ./config/esbuild-prod.js",
+    "scss": "\"npm-run-all --parallel build:dev watch-scss\"",
+    "start": "node ./server/server.js"
   },
   "author": "Ustim",
   "license": "ISC",

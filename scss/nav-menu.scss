@@ -1,26 +1,21 @@
+@import "./variables.scss";
 .menu {
-  ul {
-    z-index: 1000;
-
-    .sub-menu {
-      padding: 10px 5px 10px 5px;
-      background-color: rgb(213 242 243 / 70%);
-      border-radius: 3%;
-
-      li {
-        margin: 0;
-      }
-
-      a {
-        font-size: 12px;
-      }
+  height: 96px;
+  // ul {
+  //   z-index: 1000;
+  cursor: pointer;
+  
+  .sub-menu {
+    padding: 0;
+    a {
+      font-size: 10px;
     }
   }
 
   .cole-1 {
     float: left;
     width: 42%;
-    padding-top: 75px;
+    padding-top: 45px;
 
     .header-menu-left {
       float: right;
@@ -35,9 +30,8 @@
     float: left;
     width: 16%;
 
-
     .header-logo {
-      padding-top: 30px;
+      padding-top: 10px;
 
       img {
         width: 130px;
@@ -46,8 +40,7 @@
     }
   }
 
-  .dws-menu ul,
-  .dws-menu ol {
+  .top-menu ul {
     list-style: none;
 
     a {
@@ -56,49 +49,31 @@
     }
   }
 
-  .dws-menu>ul {
+  .top-menu > ul {
     display: flex;
     justify-content: center;
+    :hover {
+      color:$textColor2;
+      // font-weight: 800;
+    }
   }
 
   /*sub menu*/
-  .dws-menu li ul {
+  .top-menu li ul {
     position: absolute;
-    min-width: 150px;
     display: none;
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
-  .dws-menu li>ul li ul {
+  .top-menu li > ul li ul {
     position: absolute;
-
-
-
   }
 
-  .dws-menu li:hover>ul {
+  .top-menu li:hover > ul {
     display: block;
-
   }
 
-  .dws-menu a::before {
-    content: "";
-    bottom: -5px;
+  
 
-    left: 30px;
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: rgb(132, 131, 131);
-    transition: 0.2s;
-  }
-
-  .dws-menu a:hover:before {
-    width: 60%;
-  }
-
-  li {
-    margin-top: 10px;
-
-  }
+ 
 }

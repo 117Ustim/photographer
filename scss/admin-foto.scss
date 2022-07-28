@@ -1,16 +1,51 @@
+@import "./variables.scss";
 .add-photo {
   display: flex;
   width: 100% !important;
 }
+.block-1 {
+  width: 75%;
+  float: left;
 
-.admin-foto {
-  margin: 15px;
+  .admin-foto {
+    width: 100%;
+    margin: 15px;
+    padding-left: 50px;
+  }
 
+  img {
+    padding: 5px 7px;
+    width: 17%;
+    height: 240px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
+.active {
+  box-shadow: 0 0 10px #000;
+}
+.block-2 {
+  width: 25%;
+  float: left;
+}
+.delete-foto {
+  width: 100%;
+  padding-top: 20px;
+
+  img {
+    width: 25%;
+    height: 140px;
+    object-fit: cover;
+    margin: 4px;
+    overflow: hidden;
+    border: 2px solid#fff;
+  }
 }
 
-img {
-  padding: 5px 7px;
-  width: 15%;
-  height: 240px;
-  object-fit: cover;
+.line {
+  position: absolute;
+  margin: 23px 1010px;
+
+  border-left: 1px solid rgb(212, 210, 210);
+  height: 600px;
 }
