@@ -36,10 +36,7 @@ const copyStaticPlugin = (props) => {
                     path.resolve(__dirname, '..', '..', 'index.html'),
                     path.resolve(outDir, 'index.html')
                 );
-                copyHtml(
-                    path.resolve(__dirname, '..', '..', 'portfolio.html'),
-                    path.resolve(outDir, 'portfolio.html')
-                );
+                
                 copyHtml(
                     path.resolve(__dirname, '..', '..', 'admin', 'admin-foto.html'),
                     path.resolve(outDir, 'admin-foto.html')

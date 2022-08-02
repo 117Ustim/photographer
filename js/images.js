@@ -12,6 +12,7 @@ const loadPhotos = (callback,fotoUrl) => {
     success: function (data) {
       
       callback(data);
+       
     }
   });
 };
