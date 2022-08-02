@@ -14,17 +14,28 @@
 <body>
   <div class="header-menu">
     <div class="pageSelection">
-      <div class="dropdown">
+
+      <select>
+        <option value="home">Головна</option>
+        <option value="children">Дитяча</option>
+        <option value="wedding">Весiлля</option>
+      </select>
+
+
+
+      <!-- <div class="dropdown">
         <button class="btn dropdown-toggle" type="button" id="MenuButtonAdmin" data-bs-toggle="dropdown"
           aria-expanded="false">
           Выбор страницы
         </button>
-        <ul id="ttt"  class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">photos</a></li>
-          <li><a class="dropdown-item" href="#">Детское фото</a></li>
-          <li><a class="dropdown-item" href="#">Свадьба</a></li>
+        <ul id="photoDir"  class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" value="1">Головна</a></li>
+          <li><a class="dropdown-item" value="2">Дитяча</a></li>
+          <li><a class="dropdown-item" value="3">Весiлля</a></li>
+          <li><a class="dropdown-item">Репортаж</a></li>
+          <li><a class="dropdown-item">Портфолiо</a></li>
         </ul>
-      </div>
+      </div> -->
     </div>
     <div class="menu-centers">
       <div class="btn-group" role="group" aria-label="Basic example">
@@ -59,8 +70,11 @@
   <div class="container-fluid">
     
     <div class="block-1">
-      <div class="admin-foto"></div>   
+      <div class="admin-foto"></div>
+      <div class="childrenphotos"></div>    
     </div>    
+
+    
    
   <div class="line"></div>
  

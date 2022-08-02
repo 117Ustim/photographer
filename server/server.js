@@ -23,18 +23,23 @@ app.post('/save', upload.single('new-photo'), (req, resp) => {
 })
 
 // загрузка фотографий карусели
-app.get('/photos', async (req, resp) => {
-    const photos = await fs.readdir('photos');
+app.get('/photoshome', async (req, resp) => {
+    const photos = await fs.readdir('photos/photoshome');
     resp.send({ 'photos': photos });
 })
 
-app.get('/foto1', async (req, resp) => {
-    const photos = await fs.readdir('foto1');
+app.get('/photoschildren', async (req, resp) => {
+    const photos = await fs.readdir('photos/photoschildren');
+    resp.send({ 'photos': photos });
+})
+
+app.get('/photoswedding', async (req, resp) => {
+    const photos = await fs.readdir('photos/photoswedding');
     resp.send({ 'photos': photos });
 })
 
 app.get('/photo-delete', async (req, resp) => {
-    const photos = await fs.readdir('photos');
+    const photos = await fs.readdir('photos/photoshome');
     console.log(req.query);
     const photoToDelete = photos.filter(p => p === req.query.photo);
     await fs.unlink(path.resolve( path.resolve(__dirname, '..', 'photos', photoToDelete[0])));
