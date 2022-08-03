@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-const loadPhotos = (callback,fotoUrl) => {
+const loadPhotos = (callback, fotoUrl) => {
   $.ajax({
     method: 'GET',
     headers: {
@@ -9,11 +9,7 @@ const loadPhotos = (callback,fotoUrl) => {
     context: document.body,
     url: fotoUrl,
     cache: false,
-    success: function (data) {
-      
-      callback(data);
-       
-    }
+    success: data => callback(data)
   });
 };
 

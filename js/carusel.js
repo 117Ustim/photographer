@@ -20,13 +20,13 @@ const buildCarousel = () => {
       let div = document.createElement("div");
       div.className = "swiper-slide";
       let img = document.createElement("img");
-      img.src = `photos/photoshome/${photoUrl}`;
+      img.src = `photos/${photoUrl}`;
       div.appendChild(img);
       swiper.appendSlide(div);
     });
   };
 
-  loadPhotos(callback, "/photoshome");
+  loadPhotos(callback, "/photos?category=home");
   // loadPhotos(callback,'/foto1');
 };
 

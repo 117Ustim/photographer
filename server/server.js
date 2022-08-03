@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const cors = require('cors');
 const multer = require('multer')
 const fs = require('fs/promises');
 
@@ -9,44 +8,43 @@ const storage = multer.diskStorage({
         cb(null, './photos')
     },
     filename: function (req, file, cb) {
-        cb(null, file.originalname)
+        console.log(req.params)
+        cb(null, `${req.params['category']}_${file.originalname}`)
     }
 })
-const upload = multer({ storage: storage })
 
+const upload = multer({ storage: storage })
 const app = express();
-app.use(cors());
 
 // сохранение фото в карусели
-app.post('/save', upload.single('new-photo'), (req, resp) => {
+app.post('/save/:category', upload.single('new-photo'), (req, resp) => {
     resp.sendFile('admin-foto.html', { root: path.resolve(__dirname, '..', 'build') });
 })
 
-// загрузка фотографий карусели
-app.get('/photoshome', async (req, resp) => {
-    const photos = await fs.readdir('photos/photoshome');
-    resp.send({ 'photos': photos });
+// загрузка фотографий по категориям
+app.get('/photos', async (req, resp) => {
+    const category = req.query.category;
+    const photos = await fs.readdir('photos/');
+
+    resp.send({ 'photos': photos.filter(photo => photo.includes(category)) });
 })
 
-app.get('/photoschildren', async (req, resp) => {
-    const photos = await fs.readdir('photos/photoschildren');
-    resp.send({ 'photos': photos });
+// удаление фотографий по категориям
+app.delete('/photos/:id', async (req, resp) => {
+    const requestPhotos = req.params.id.split(',')
+    const photosDir = await fs.readdir('photos/');
+    const photosToDelete = photosDir.filter(p => requestPhotos.includes(p));
+
+    deletePhotos(photosToDelete);
+
+    resp.sendStatus(200);
 })
 
-app.get('/photoswedding', async (req, resp) => {
-    const photos = await fs.readdir('photos/photoswedding');
-    resp.send({ 'photos': photos });
-})
-
-app.get('/photo-delete', async (req, resp) => {
-    const photos = await fs.readdir('photos/photoshome');
-    console.log(req.query);
-    const photoToDelete = photos.filter(p => p === req.query.photo);
-    await fs.unlink(path.resolve( path.resolve(__dirname, '..', 'photos', photoToDelete[0])));
-    // resp.sendFile('admin-foto.html', { root: path.resolve(__dirname, '..', 'build') });
-    resp.send(''); 
-})
-
+function deletePhotos(photos) {
+    photos.forEach(async photo => {
+        await fs.unlink(path.resolve(path.resolve(__dirname, '..', 'photos', photo)));
+    })
+}
 
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
 app.use('/photos', express.static('photos'));

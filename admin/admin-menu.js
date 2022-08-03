@@ -1,5 +1,4 @@
 import $ from "jquery";
-import "bootstrap";
 import loadPhotos from "../js/images";
 import deletePhotos from "../js/imagesdel";
 import "../scss/admin-foto.scss";
@@ -7,13 +6,31 @@ import "../scss/admin-foto.scss";
 // const imagesChildren = document.querySelector(".childrenphotos");
 
 document.querySelector(".button-exit").onclick = function () {
-  window.location.href = "../index.html";
+  window.location.href = "index.html";
 };
 
-const imagesOut = $(".admin-foto");
-
 // выбориз списка
-let photosDir = document.querySelector("select");
+let photosCategory = document.querySelector("select");
+
+$('.add-photo').on('submit', (e) => {
+  e.preventDefault();
+  const files = $('#photoUpload').prop('files');
+  const form = new FormData();
+  form.append('new-photo', files[0]);
+  $.ajax({
+    method: 'POST',
+    url: `/save/photoshome`,
+    data: form,
+    cache: false,
+    contentType: false,
+    processData: false,
+    success: () => {
+      document.location.reload();
+    }
+  })
+});
+
+const imagesOut = $(".admin-foto");
 
 function choose(event) {
   document
@@ -26,40 +43,37 @@ function choose(event) {
   };
 }
 
-function photosCallback(data,photoDir){
+function photosCallback(data) {
   imagesOut.empty();
   data.photos.forEach((photoUrl) => {
     let img = document.createElement("img");
-    img.src = `photos/${photoDir}/${photoUrl}`;
+    img.src = `photos/${photoUrl}`;
     img.onclick = choose;
     imagesOut.append(img);
   });
 
 }
 
-  loadPhotos((data )=> photosCallback(data,'photoshome'), `/photoshome`);
+const elem = document.querySelector(".delete-foto");
+
+document.querySelector("#delFotos").onclick = () => {
+  let photosToDelete = Array.from(elem.getElementsByTagName("img")).map(el => {
+    return el.getAttribute("src").split("/")[1]
+  });
 
 
-photosDir.addEventListener("change", function () {
-  let theObject = this.value;
+  deletePhotos((data) => {
+    window.location.reload();
+  }, photosToDelete);
+};
 
-  if (theObject == "home") {
-    link2 = "photoshome";
-  }
+loadPhotos((data) => photosCallback(data), `/photos?category=${photosCategory.value}`);
 
-  if (theObject == "children") {
-    link2 = "photoschildren";
-  }
+photosCategory.addEventListener("change", function () {
+  let selectedCategory = this.value;
 
-  if (theObject == "wedding") {
-    link2 = "photoswedding";
-  }
- 
+  loadPhotos((data) => photosCallback(data), `/photos?category=${selectedCategory}`);
 
-  loadPhotos((data )=> photosCallback(data,`${link2}`), `/${link2}`);
-
-
- 
   function choose(event) {
     document
       .querySelectorAll(".admin-foto img")
@@ -70,16 +84,6 @@ photosDir.addEventListener("change", function () {
       document.querySelector(".delete-foto").appendChild(event.target);
     };
   }
-  const elem = document.querySelector(".delete-foto");
-  document.querySelector("#delFotos").onclick = function () {
-    let myimg = elem.getElementsByTagName("img")[0];
-
-    let mysrc = myimg.getAttribute("src").split("/")[2];
-
-    deletePhotos((data) => {
-      window.location.reload();
-    }, mysrc);
-  };
 });
 
 // photosDir.addEventListener('change', function() {
