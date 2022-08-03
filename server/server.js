@@ -8,8 +8,7 @@ const storage = multer.diskStorage({
         cb(null, './photos')
     },
     filename: function (req, file, cb) {
-        console.log(req.params)
-        cb(null, `${req.params['category']}_${file.originalname}`)
+        cb(null, `${req.params['category']}_${file.originalname}`) // добавление категории к названию фото
     }
 })
 
@@ -23,21 +22,21 @@ app.post('/save/:category', upload.single('new-photo'), (req, resp) => {
 
 // загрузка фотографий по категориям
 app.get('/photos', async (req, resp) => {
-    const category = req.query.category;
-    const photos = await fs.readdir('photos/');
+    const category = req.query.category; // получение категории из параметров запроса
+    const photos = await fs.readdir('photos/'); // чтение папки с фотографиями
 
-    resp.send({ 'photos': photos.filter(photo => photo.includes(category)) });
+    resp.send({ 'photos': photos.filter(photo => photo.includes(category)) }); // фильтрация фото по категории
 })
 
 // удаление фотографий по категориям
 app.delete('/photos/:id', async (req, resp) => {
-    const requestPhotos = req.params.id.split(',')
-    const photosDir = await fs.readdir('photos/');
-    const photosToDelete = photosDir.filter(p => requestPhotos.includes(p));
+    const requestPhotos = req.params.id.split(',') // получение списка названий фото
+    const photosDir = await fs.readdir('photos/'); // чтение папки с фотографиями 
+    const photosToDelete = photosDir.filter(p => requestPhotos.includes(p)); // фильтрация по названиям фото которые нужно удалить
 
-    deletePhotos(photosToDelete);
+    deletePhotos(photosToDelete); // удаление фото
 
-    resp.sendStatus(200);
+    resp.sendStatus(200); // ответ от сервера -> http status 200
 })
 
 function deletePhotos(photos) {
