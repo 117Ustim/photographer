@@ -3,15 +3,10 @@ import loadPhotos from "./images";
 
 import { Swiper } from "../node_modules/swiper/swiper-bundle.esm.browser";
 
-
-
+document.querySelector(".portfoliophoto").hidden = true;
 const swiper = new Swiper(".swiper", {
   slidesPerView: 3,
   spaceBetween: 20,
-
-  // mousewheel: {
-  //  sensitivity:1,
-  // },
 });
 
 const buildCarousel = () => {
@@ -27,7 +22,6 @@ const buildCarousel = () => {
   };
 
   loadPhotos(callback, "/photos?category=home");
-  // loadPhotos(callback,'/foto1');
 };
 
 export default buildCarousel;

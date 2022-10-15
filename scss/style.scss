@@ -1,48 +1,40 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body,
 html {
-    font-family:$fontmenu ;
-    background-color: $bgColor ;
-    color: $textColor;
-    box-sizing: border-box;
-
+  font-family: $fontmenu;
+  background-color: $bgColor;
+  color: $textColor;
+  box-sizing: border-box;
 }
 
 input {
-    outline: none;
-    border: none;
-    border: solid 1px #f2f2f2;
-    }
-    
+  outline: none;
+  border: none;
+  border: solid 1px #f2f2f2;
+}
+
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .links {
-    text-transform: uppercase;
+  text-transform: uppercase;
 
-    a {
-        text-decoration: none;
-        font-size: $fzmenu;
-        letter-spacing: 7px;
-        color: $textColor;
-    }
+  a {
+    text-decoration: none;
+    font-size: $fzmenu;
+    letter-spacing: 7px;
+    color: $textColor;
+  }
 }
 
 .container-fluid {
-    width: 100% ;
-    min-height: 50px;
+  width: 100%;
+  min-height: 50px;
 }
-
-// .swiper-container .swiper-zoom-container>img {
-//     width: 100%;
-//     height: auto;
-//     object-fit: cover;
-//     object-position: center;
-// }

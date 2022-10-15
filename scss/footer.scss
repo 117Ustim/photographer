@@ -3,25 +3,23 @@
   width: 100%;
   height: 40px;
   background-color: $bgLineFooter;
-
 }
 .line-footer {
   width: 100%;
   height: 40px;
- margin-top: 20px; 
+  margin-top: 20px;
   background-color: $bgLineFooter;
-
-  
 }
 .col-4 {
-    position: absolute;
-   
-    width: 100%;
-    color: rgb(212, 206, 206);
+  position: absolute;
 
-    img {
-      margin-top: -30px;
-      width: 100px;
-      height: 100px;
-    }
+  width: 100%;
+  color: rgb(212, 206, 206);
+
+  img {
+    margin-top: -30px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
   }
+}

@@ -1,89 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="index.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <link rel="stylesheet" href="index.css">
+    <title>admin-foto</title>
+  </head>
 
-  <title>admin-foto</title>
-</head>
+  <body>
+    <div class="header-menu">
+      <div class="pageSelection">
+        <select>
+          <option value="home">Головна</option>
+          <option value="children">Дитяча</option>
+          <option value="wedding">Весiлля</option>
+          <option value="reportage">Репортаж</option>
+          <option value="portfolio">Портфолiо</option>
+        </select>
+      </div>
 
-<body>
-  <div class="header-menu">
-    <div class="pageSelection">
+      <div class="menu-add">
+        <form
+          class="mb-3 add-photo"
+          action="/save"
+          enctype="multipart/form-data"
+          method="post"
+        >
+          <input
+            id="photoUpload"
+            class="form-control form-control-sm"
+            name="new-photo"
+            type="file"
+          />
+          <input type="submit" class="button-add-delete" value="Добавить" />
+        </form>
+      </div>
+      <div class="menu-delete">
+        <p>Нажать два раза на фото</p>
+        <input
+          type="submit"
+          class="button-add-delete"
+          value="Удалить"
+          id="delFotos"
+        />
+      </div>
 
-      <select>
-        <option value="home">Головна</option>
-        <option value="children">Дитяча</option>
-        <option value="wedding">Весiлля</option>
-      </select>
-
-
-
-      <!-- <div class="dropdown">
-        <button class="btn dropdown-toggle" type="button" id="MenuButtonAdmin" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          Выбор страницы
-        </button>
-        <ul id="photoDir"  class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" value="1">Головна</a></li>
-          <li><a class="dropdown-item" value="2">Дитяча</a></li>
-          <li><a class="dropdown-item" value="3">Весiлля</a></li>
-          <li><a class="dropdown-item">Репортаж</a></li>
-          <li><a class="dropdown-item">Портфолiо</a></li>
-        </ul>
-      </div> -->
+      <button type="button" class="button-exit">Выйти</button>
     </div>
-    <div class="menu-centers">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary f-1">Фотографии</button>
-        <button href="#" type="button" class="btn btn-primary tel-1">
-          Данные
-        </button>
-        <button href="#" type="button" class="btn btn-primary">Email</button>
+
+    <div class="container-fluid">
+      <div class="block-1">
+        <div class="admin-foto"></div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="block-2">
+        <div class="delete-foto"></div>
       </div>
     </div>
-
-    <div class="menu-add">
-      <form class="mb-3 add-photo" action="/save" enctype="multipart/form-data" method="post">
-        <!-- <label for="formFileSm" class="form-label"></label> -->
-        <input id="photoUpload" class="form-control form-control-sm" name="new-photo" type="file" />
-        <input type="submit" class="button-add-delete" value="Добавить" />
-      </form>
-    </div>
-    <div class="menu-delete">
-      <!-- <form class="mb-3 add-photo" action="/photo" enctype="multipart/form-data" method="post"> -->
-      <!-- <label for="formFileSm" class="form-label"></label> -->
-      <p>Нажать два раза на фото</p>
-      <input type="submit" class="button-add-delete " value="Удалить" id="delFotos" />
-      <!-- </form> -->
-    </div>
-
-
-
-    <button type="button" class="button-exit">Выйти</button>
-  </div>
-
-  <div class="container-fluid">
-
-    <div class="block-1">
-      <div class="admin-foto"></div>
-      <div class="childrenphotos"></div>
-    </div>
-
-
-
-    <div class="line"></div>
-
-    <div class="block-2">
-      <div class="delete-foto"></div>
-    </div>
-
-  </div>
-  <script src="admin-menu.js"></script>
-</body>
-
+    <script src="admin-menu.js"></script>
+  </body>
 </html>

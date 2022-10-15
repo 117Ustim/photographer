@@ -1,10 +1,8 @@
 @import "./variables.scss";
 .menu {
   height: 96px;
-  // ul {
-  //   z-index: 1000;
   cursor: pointer;
-  
+
   .sub-menu {
     padding: 0;
     a {
@@ -31,7 +29,7 @@
     width: 16%;
 
     .header-logo {
-      padding-top: 10px;
+      padding-top: 7px;
 
       img {
         width: 130px;
@@ -53,8 +51,7 @@
     display: flex;
     justify-content: center;
     :hover {
-      color:$textColor2;
-      // font-weight: 800;
+      color: $textColor2;
     }
   }
 
@@ -72,8 +69,4 @@
   .top-menu li:hover > ul {
     display: block;
   }
-
-  
-
- 
 }

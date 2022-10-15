@@ -41,13 +41,10 @@ const copyStaticPlugin = (props) => {
                     path.resolve(__dirname, '..', '..', 'admin', 'admin-foto.html'),
                     path.resolve(outDir, 'admin-foto.html')
                 );
-                copyHtml(
-                    path.resolve(__dirname, '..', '..', 'admin', 'admin-tel.html'),
-                    path.resolve(outDir, 'admin-tel.html')
-                );
+                
 
                 console.log('copy static finished');
-            })
+            });
         }
     }
 }
